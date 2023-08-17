@@ -33,7 +33,7 @@ LazyJson demonstrates superior parsing speed compared to the other library, offe
 
 To start using the LazyJson Java Library, follow these simple steps:
 
-1. **Download the Library:** Download the LazyJson library JAR file from the [releases section](https://github.com/your-username/lazyjson/releases) of the GitHub repository.
+1. **Download the Library:** Download the LazyJson library JAR file from the [releases section](https://github.com/aperfilev/lazyjson/releases) of the GitHub repository.
 
 2. **Add to Your Project:** Add the downloaded JAR file to your Java project's classpath.
 
@@ -85,6 +85,19 @@ To start using the LazyJson Java Library, follow these simple steps:
    ```java
    parser.close();
    ```
+
+## Thread Safety
+
+The LazyJson Java Library offers exceptional parsing performance for JSON files, but it's important to note that the library is **not thread-safe** by default. This means that the library's classes and methods are not designed to be used concurrently by multiple threads without proper synchronization.
+
+If you intend to use LazyJson in a multi-threaded environment, it's recommended to ensure proper synchronization mechanisms to prevent race conditions and ensure correct behavior. You might consider using techniques such as synchronized blocks or locks to control access to the library's parsing and processing methods.
+
+Remember that ensuring thread safety is your responsibility as a developer, and it's important to carefully design and test your multi-threaded code to avoid potential issues.
+
+If thread safety is a critical requirement for your use case, you might want to explore other options or consider implementing thread-safe wrappers around the LazyJson library.
+
+**Note:** This library does not provide built-in thread safety mechanisms, so please keep this in mind when designing your application's architecture.
+
 
 ## Contributing
 
