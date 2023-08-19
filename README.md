@@ -1,4 +1,4 @@
-_# LazyJson Java Library
+# LazyJson Java Library
 
 The LazyJson Java Library is a powerful and efficient tool designed to provide optimal parsing performance for JSON files. Parsing large JSON files can be resource-intensive and time-consuming, especially when dealing with complex structures. The LazyJson library aims to address this challenge by offering a lazy and incremental approach to JSON parsing, allowing you to access and process JSON data on-the-fly without loading the entire file into memory.
 
