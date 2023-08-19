@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'localhost.tools.json'
+group = 'local.tools.json'
 version = '1.0-SNAPSHOT'
 
 repositories {

@@ -40,9 +40,9 @@ To start using the LazyJson Java Library, follow these simple steps:
 3. **Import the Library:** Import the LazyJson classes in your Java code:
 
    ```java
-   import localhost.tools.json.lazyjson.JSONObject;
-   import localhost.tools.json.lazyjson.JSONArray;
-   import localhost.tools.json.lazyjson.JSONException;
+   import local.tools.json.lazyjson.JSONObject;
+   import local.tools.json.lazyjson.JSONArray;
+   import local.tools.json.lazyjson.JSONException;
    ```
 
 4. **Initialize LazyJsonParser:** Create an instance of `LazyJsonParser` and provide the JSON file's input stream:
