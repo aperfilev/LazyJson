@@ -27,6 +27,10 @@ import java.util.Iterator;
 
 public class JSONTestUtils {
 
+    /**
+     * This method access value of JSONObject which makes lazy object parser to actually parse its value.
+     * @param object
+     */
     public static final void validate(JSONObject object) {
         Iterator<String> keys = object.keys();
         while (keys.hasNext()) {
@@ -48,6 +52,10 @@ public class JSONTestUtils {
         }
     }
 
+    /**
+     * This method access value of JSONObject which makes lazy object parser to actually parse its value.
+     * @param array
+     */
     public static final void validate(JSONArray array) {
         for (int i = 0; i < array.length(); ++i) {
             Object value = array.get(i);

@@ -68,7 +68,6 @@ public class BasicJSONArrayTest {
     @Test
     public void testBaseJSONArrayParsing0() throws JSONException {
         JSONArray obj = new JSONArray(array_unpretty);
-
         assertEquals("John", obj.getString(0));
         assertEquals("Doe", obj.getString(1));
         assertEquals(22, obj.getInt(2));

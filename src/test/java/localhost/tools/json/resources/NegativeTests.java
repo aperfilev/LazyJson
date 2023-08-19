@@ -1,5 +1,9 @@
-package localhost.tools.json;
+package localhost.tools.json.resources;
 
+import localhost.tools.json.JSONArray;
+import localhost.tools.json.JSONException;
+import localhost.tools.json.JSONObject;
+import localhost.tools.json.JSONTestUtils;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
