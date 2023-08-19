@@ -1,4 +1,4 @@
-# LazyJson Java Library
+_# LazyJson Java Library
 
 The LazyJson Java Library is a powerful and efficient tool designed to provide optimal parsing performance for JSON files. Parsing large JSON files can be resource-intensive and time-consuming, especially when dealing with complex structures. The LazyJson library aims to address this challenge by offering a lazy and incremental approach to JSON parsing, allowing you to access and process JSON data on-the-fly without loading the entire file into memory.
 
@@ -40,51 +40,63 @@ To start using the LazyJson Java Library, follow these simple steps:
 3. **Import the Library:** Import the LazyJson classes in your Java code:
 
    ```java
-   import com.lazyjson.LazyJsonParser;
-   import com.lazyjson.LazyJsonObject;
-   import com.lazyjson.exceptions.LazyJsonException;
+   import localhost.tools.json.lazyjson.JSONObject;
+   import localhost.tools.json.lazyjson.JSONArray;
+   import localhost.tools.json.lazyjson.JSONException;
    ```
 
 4. **Initialize LazyJsonParser:** Create an instance of `LazyJsonParser` and provide the JSON file's input stream:
 
-   ```java
-   try {
-       LazyJsonParser parser = new LazyJsonParser(new FileInputStream("path/to/your/json/file.json"));
-   } catch (IOException e) {
-       // Handle the exception
-   }
-   ```
+    ```java
+    try {
+        String jsonContent = "{}"; 
+        JSONObject jsonObject = new JSONObject(jsonContent);
+    } catch (JSONException e) {
+        // Handle the exception
+    }
+    ```
 
-5. **Access JSON Data:** Use the `LazyJsonParser` instance to extract and process JSON data:
+5. **Access JSON Data:** Use the `JSONObject` or `JSONArray` instance to extract and process JSON data:
 
    ```java
-   try {
-       LazyJsonObject jsonObject = parser.parseObject();
-       String value = jsonObject.getString("key");
-       // Process the value
-   } catch (LazyJsonException e) {
-       // Handle parsing exceptions
-   }
-   ```
+    try {
+        String jsonContent = "{}"; 
+        JSONObject jsonObject = new JSONObject();
+        String value = jsonObject.getString("key");
+        // Process the value
+    } catch (JSONException e) {
+        // Handle parsing exceptions
+    }
+    ```
+   or
+   ```java
+    try {
+        String jsonContent = "[]"; 
+        JSONArray jsonArray = new JSONArray(jsonContent);
+        String value = jsonArray.get(0);
+        // Process the value
+    } catch (JSONException e) {
+        // Handle parsing exceptions
+    }
+    ```
+
 
 6. **Incremental Processing:** Iterate through JSON arrays lazily:
 
    ```java
-   try {
-       while (parser.hasNext()) {
-           LazyJsonObject item = parser.parseObject();
-           // Process each array item
-       }
-   } catch (LazyJsonException e) {
-       // Handle parsing exceptions
-   }
-   ```
-
-7. **Close the Parser:** Ensure to close the parser when you're done processing the JSON file:
-
-   ```java
-   parser.close();
-   ```
+    try {
+        String jsonContent = "[]";
+        JSONArray jsonArray = new JSONArray(jsonContent);
+        for (Object o : jsonArray)
+            if (o instanceof JSONObject) {
+                (JSONObject) o;
+            }
+            //...
+        }
+    } catch (JSONException e) {
+        // Handle parsing exceptions
+    }
+    ```
 
 ## Thread Safety
 
@@ -101,7 +113,7 @@ If thread safety is a critical requirement for your use case, you might want to 
 
 ## Contributing
 
-Contributions to the LazyJson Java Library are welcome! If you encounter any issues, have suggestions for improvements, or would like to contribute new features, feel free to submit a pull request on the [GitHub repository](https://github.com/your-username/lazyjson).
+Contributions to the LazyJson Java Library are welcome! If you encounter any issues, have suggestions for improvements, or would like to contribute new features, feel free to submit a pull request on the [GitHub repository](https://github.com/aperfilev/lazyjson).
 
 ## License
 
@@ -109,4 +121,4 @@ The LazyJson Java Library is released under the [MIT License](https://opensource
 
 ---
 
-**Note:** This README is a template and may need to be customized to accurately reflect the LazyJson library you have created. Make sure to provide the appropriate links, examples, and usage instructions specific to your library.
+**Note:** This README is a template and may need to be customized to accurately reflect the LazyJson library you have created. Make sure to provide the appropriate links, examples, and usage instructions specific to your library._
