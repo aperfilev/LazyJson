@@ -121,4 +121,4 @@ The LazyJson Java Library is released under the [MIT License](https://opensource
 
 ---
 
-**Note:** This README is a template and may need to be customized to accurately reflect the LazyJson library you have created. Make sure to provide the appropriate links, examples, and usage instructions specific to your library._
+**Note:** This README is a template and may need to be customized to accurately reflect the LazyJson library you have created. Make sure to provide the appropriate links, examples, and usage instructions specific to your library.
